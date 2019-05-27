@@ -1,8 +1,10 @@
 package steps
 
+import cucumber.api.Scenario
 import cucumber.api.groovy.EN
 import cucumber.api.groovy.Hooks
 import impl.ActionsImpl
+import impl.helpers.TestDataManager
 import io.cify.framework.core.DeviceCategory
 import io.cify.framework.core.DeviceManager
 
@@ -15,6 +17,14 @@ import io.cify.framework.core.DeviceManager
 this.metaClass.mixin(Hooks)
 this.metaClass.mixin(EN)
 
+
+Before { Scenario scenario ->
+    TestDataManager.setTestData("Scenario", scenario)
+
+    DeviceCategory.values().each {
+        DeviceManager.getInstance().getCapabilities().addToDesiredCapabilities(it, "testobject_test_name", scenario.name)
+    }
+}
 
 Given(~/^user opens application on (.+) device$/) { DeviceCategory category ->
     ActionsImpl.getCoreActions(category).openApplication()
