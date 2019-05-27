@@ -13,6 +13,9 @@ SwagLab Test Automaton Project is a mobile automation project. This project is u
  
 https://nordictestingdays.eu/events/workshops/mobile-test-automation-using-cify-open-source-framework
  
+![saucelabs.ios](src/test/resources/introduction/ios-overview.gif) ![saucelabs.android](src/test/resources/introduction/android-overview.gif)
+ 
+Sample application is made by: https://github.com/saucelabs/sample-app-mobile
 ## How the project structure looks like?
 
 ### Project structure overview
