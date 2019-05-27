@@ -1,5 +1,12 @@
 package impl.helpers
 
+/**
+ * Created by Marko Konsa for Nordic Testing Day workshop
+ * Mobile Test Automation Using Cify Open-Source Framework
+ * https://nordictestingdays.eu/events/workshops/mobile-test-automation-using-cify-open-source-framework
+ *
+ * Default test exception class
+ */
 class CifyTestException extends Exception {
     /**
      * Blank Test exception with message

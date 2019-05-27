@@ -2,7 +2,13 @@ package impl.helpers
 
 import groovy.json.JsonSlurper
 import groovy.json.internal.LazyMap
-
+/**
+ * Created by Marko Konsa for Nordic Testing Day workshop
+ * Mobile Test Automation Using Cify Open-Source Framework
+ * https://nordictestingdays.eu/events/workshops/mobile-test-automation-using-cify-open-source-framework
+ *
+ * This class is responsible for TestData management.
+ */
 class TestDataManager {
 
     private static ThreadLocal<LazyMap> testData = new ThreadLocal<>([:])

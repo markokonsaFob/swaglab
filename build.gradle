@@ -8,7 +8,6 @@ buildscript {
     }
     dependencies {
         classpath('io.cify:cify-runner:1.3.4')
-        classpath "io.qameta.allure:allure-gradle:2.5"
     }
 }
 
@@ -21,7 +20,6 @@ task wrapper(type: Wrapper) {
 
 apply plugin: 'groovy'
 apply plugin: 'cify-runner'
-apply plugin: 'java'
 
 repositories {
     mavenCentral()

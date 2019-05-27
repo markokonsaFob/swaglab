@@ -7,7 +7,9 @@ import impl.helpers.CifyTestException
 import impl.helpers.Constants
 
 /**
- * Created by FOB Solutions
+ * Created by Marko Konsa for Nordic Testing Day workshop
+ * Mobile Test Automation Using Cify Open-Source Framework
+ * https://nordictestingdays.eu/events/workshops/mobile-test-automation-using-cify-open-source-framework
  */
 
 this.metaClass.mixin(Hooks)

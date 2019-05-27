@@ -6,7 +6,7 @@ import io.cify.framework.core.DeviceCategory
 import io.cify.framework.core.DeviceManager
 
 /**
- * Created by markokonsa for Nordic Testing Day workshop
+ * Created by Marko Konsa for Nordic Testing Day workshop
  * Mobile Test Automation Using Cify Open-Source Framework
  * https://nordictestingdays.eu/events/workshops/mobile-test-automation-using-cify-open-source-framework
  *

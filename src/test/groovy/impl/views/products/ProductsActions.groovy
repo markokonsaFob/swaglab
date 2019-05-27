@@ -12,7 +12,7 @@ import io.cify.framework.core.Device
  *
  * Login Actions for all platforms
  */
-class ProductsActions implements ActionsMobileAndroidApp, ActionsMobileIOSApp, ActionsDesktopWeb {
+class ProductsActions implements ActionsDesktopWeb, ActionsMobileIOSApp, ActionsMobileAndroidApp {
 
     Device device
     ProductsPage productsPage
