@@ -40,8 +40,17 @@ class TestDataManager {
      * @param accountType
      * @return
      */
-    static LazyMap getAccount(String accountType) {
-        (getTestData().get(Constants.ACCOUNTS) as LazyMap).get(accountType) as LazyMap
+    static LazyMap getAccount(Constants.accountType accountType) {
+        (getTestData().get(Constants.ACCOUNTS) as LazyMap).get(accountType.toString()) as LazyMap
+    }
+
+    /**
+     * Gets environment data from data file
+     * @param name
+     * @return
+     */
+    static String getEnvironmentData(String name) {
+        (getTestData().get(Constants.ENVIRONMENT_VARIABLES) as LazyMap).get(name)
     }
 
     /**

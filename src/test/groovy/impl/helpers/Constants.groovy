@@ -4,9 +4,16 @@ package impl.helpers
  */
 class Constants {
 
+    static  enum accountType {
+        VALID,
+        INVALID
+    }
+
     static final String DATA_FILE_NAME = "data.json"
 
     static final String ACCOUNTS = "accounts"
+
+    static final String ENVIRONMENT_VARIABLES = "environmentVariables"
 
     static final long LONG_WAIT = 30
 

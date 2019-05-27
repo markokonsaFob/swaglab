@@ -9,13 +9,22 @@
       "newCommandTimeout": "5000",
       "automationName": "uiautomator2",
       "autoGrantPermissions": "true",
-      "app": "//App location here"
+      "app": "src/test/resources/applications/swaglab.apk",
+      "appActivity": "com.swaglabsmobileapp.MainActivity",
+      "browserName": ""
     },
     "ios": {
+      "capability": "iphone",
+      "deviceName": "Local iPhone",
+      "app": "src/test/resources/applications/swaglab.ipa",
+      "remote": "http://0.0.0.0:4723/wd/hub",
+      "udid": "auto",
+      "automationName":"XCUITest"
 
     },
     "browser": {
-
+      "capability": "firefox",
+      "deviceName": "Local Firefox"
     }
   }
 }

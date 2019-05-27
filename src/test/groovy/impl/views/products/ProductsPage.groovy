@@ -1,5 +1,7 @@
-package impl.views.login
+package impl.views.products
 
+import io.appium.java_client.pagefactory.AndroidFindBy
+import io.appium.java_client.pagefactory.iOSXCUITFindBy
 import io.cify.framework.PageObjects
 import io.cify.framework.core.Device
 import org.openqa.selenium.WebElement
@@ -10,25 +12,18 @@ import org.openqa.selenium.support.FindBy
  * Mobile Test Automation Using Cify Open-Source Framework
  * https://nordictestingdays.eu/events/workshops/mobile-test-automation-using-cify-open-source-framework
  *
- * Login page objects for all platforms
+ * Products page objects for all platforms
  */
-class LoginPage extends PageObjects {
+class ProductsPage extends PageObjects {
 
-    @FindBy(className = "login_logo")
-    WebElement loginLogo
-
-    @FindBy(id = "user-name")
-    WebElement usernameField
-
-    @FindBy(id = "password")
-    WebElement passwordField
-
-    @FindBy(className = "btn_action")
-    WebElement loginButton
+    @FindBy(className = "inventory_item")
+    @AndroidFindBy(xpath = "(//android.view.ViewGroup[@content-desc=\"test-Item\"])")
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"test-Item\"])")
+    List<WebElement> inventoryItems
 
     Device device
 
-    LoginPage(Device device) {
+    ProductsPage(Device device) {
         super(device)
         this.device = device
     }

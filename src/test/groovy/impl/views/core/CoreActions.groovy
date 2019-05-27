@@ -1,5 +1,6 @@
 package impl.views.core
 
+import impl.helpers.TestDataManager
 import io.cify.framework.core.Device
 import io.cify.framework.core.DeviceCategory
 import io.cify.framework.core.DeviceManager
@@ -26,24 +27,17 @@ class CoreActions {
      * @param device
      */
     void openApplication() {
-        String app = device.getCapabilities().getCapability("app")
 
-        if (app) {
-            app.startsWith("http://") || app.startsWith("https://") ?
-                    device.openApp() :
-                    device.openApp(new File(app).getAbsolutePath())
+        if (category == DeviceCategory.BROWSER) {
+            device.openBrowser(TestDataManager.getEnvironmentData("browserUrl"))
         } else {
-            device.openApp()
+            String appPath = device.getCapabilities().getCapability("app")
+            if (appPath.startsWith("http")) {
+                device.openApp(new File(appPath).getAbsolutePath())
+            } else {
+                device.openApp()
+            }
         }
-    }
-
-    /**
-     * Open browser on given URL
-     * @param url
-     */
-    static void openBrowser(String url) {
-        Device browserDevice = DeviceManager.getInstance().createDevice(DeviceCategory.BROWSER)
-        browserDevice.openBrowser(url)
     }
 
 }

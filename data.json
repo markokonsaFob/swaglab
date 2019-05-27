@@ -1,4 +1,7 @@
 {
+  "environmentVariables": {
+    "browserUrl" : "https://www.saucedemo.com/"
+  },
   "accounts": {
     "VALID": {
       "username": "standard_user",

@@ -3,6 +3,7 @@ package steps
 import cucumber.api.groovy.EN
 import cucumber.api.groovy.Hooks
 import impl.ActionsImpl
+import io.cify.framework.core.DeviceCategory
 import io.cify.framework.core.DeviceManager
 
 /**
@@ -12,8 +13,9 @@ import io.cify.framework.core.DeviceManager
 this.metaClass.mixin(Hooks)
 this.metaClass.mixin(EN)
 
-Given(~/^user opens the application$/) { ->
-    ActionsImpl.getCoreActions().openApplication()
+
+Given(~/^user opens application on (.+) device$/) { DeviceCategory category ->
+    ActionsImpl.getCoreActions(category).openApplication()
 }
 
 After {
