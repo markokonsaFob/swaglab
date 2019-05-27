@@ -1,0 +1,12 @@
+{
+  "accounts": {
+    "VALID": {
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "INVALID": {
+      "username": "random_user",
+      "password": "secret_secret"
+    }
+  }
+}

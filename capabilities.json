@@ -1,0 +1,13 @@
+{
+  "set": {
+    "android": [
+      {
+        "capability": "android",
+        "deviceName": "Local Android",
+        "remote": "http://0.0.0.0:4723/wd/hub",
+        "newCommandTimeout": "5000",
+        "app": "// App path here"
+      }
+    ]
+  }
+}
