@@ -33,9 +33,9 @@ class CoreActions {
         } else {
             String appPath = device.getCapabilities().getCapability("app")
             if (appPath.startsWith("http")) {
-                device.openApp(new File(appPath).getAbsolutePath())
-            } else {
                 device.openApp()
+            } else {
+                device.openApp(new File(appPath).getAbsolutePath())
             }
         }
     }
