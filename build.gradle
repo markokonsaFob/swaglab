@@ -8,6 +8,7 @@ buildscript {
     }
     dependencies {
         classpath('io.cify:cify-runner:1.3.4')
+        classpath('io.cify:cify-reporter:0.0.14')
     }
 }
 
@@ -32,7 +33,7 @@ dependencies {
     compile gradleApi()
     compile group: 'org.json', name: 'json', version: '20160212'
     compile group: 'io.cify', name: 'cify-framework', version: '1.3.24'
-    compile 'io.cify:cify-reporter:0.0.9'
+    compile 'io.cify:cify-reporter:0.0.14'
 
     testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
     testCompile group: 'junit', name: 'junit', version: '4.12'
@@ -40,7 +41,15 @@ dependencies {
 }
 
 import io.cify.runner.tasks.CifyCucumberTask
+import io.cify.CifyReportBuilder
 
 tasks.withType(CifyCucumberTask) {
     maxHeapSize = '8000m'
+}
+
+// Generate reports from JSON results
+// Can be used with cucumber CLI task
+// usually this should be done on Jenkins but for demonstration purposes will add it here.
+tasks.cucumber.doLast() {
+    CifyReportBuilder.generateReports("SwagLabs", "Local Execution")
 }
