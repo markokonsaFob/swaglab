@@ -2,7 +2,7 @@
   "videoRecord": false,
   "videoDir": "build/cify/videos/",
   "capabilities": {
-    "android": {
+    "android": [{
       "capability": "android",
       "deviceName": "Local Android",
       "remote": "http://0.0.0.0:4723/wd/hub",
@@ -12,8 +12,8 @@
       "app": "src/test/resources/applications/swaglab.apk",
       "appActivity": "com.swaglabsmobileapp.MainActivity",
       "browserName": ""
-    },
-    "ios": {
+    }],
+    "ios": [{
       "capability": "iphone",
       "deviceName": "Local iPhone",
       "app": "src/test/resources/applications/swaglab.ipa",
@@ -21,10 +21,10 @@
       "udid": "auto",
       "automationName":"XCUITest"
 
-    },
-    "browser": {
+    }],
+    "browser": [{
       "capability": "firefox",
       "deviceName": "Local Firefox"
-    }
+    }]
   }
 }
