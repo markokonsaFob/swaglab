@@ -32,7 +32,7 @@ repositories {
 dependencies {
     compile gradleApi()
     compile group: 'org.json', name: 'json', version: '20160212'
-    compile group: 'io.cify', name: 'cify-framework', version: '1.4.0-beta4'
+    compile group: 'io.cify', name: 'cify-framework', version: '1.4.0-beta9'
     compile 'io.cify:cify-reporter:0.0.16'
 
     testCompile group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
