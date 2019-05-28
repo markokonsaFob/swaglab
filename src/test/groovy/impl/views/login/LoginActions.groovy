@@ -8,6 +8,8 @@ import io.cify.framework.actions.ActionsMobileAndroidApp
 import io.cify.framework.actions.ActionsMobileIOSApp
 import io.cify.framework.core.Device
 
+import static impl.helpers.ActionsWrapper.waitForCondition
+
 /**
  * Created by Marko Konsa for Nordic Testing Day workshop
  * Mobile Test Automation Using Cify Open-Source Framework
@@ -30,9 +32,11 @@ class LoginActions implements ActionsMobileAndroidApp, ActionsMobileIOSApp, Acti
      * @return
      */
     boolean isLoginPageVisible() {
-        isDisplayed(loginPage.usernameField) &&
-                isDisplayed(loginPage.passwordField) &&
-                isDisplayed(loginPage.loginButton)
+        waitForCondition(device, {
+            isDisplayed(loginPage.usernameField) &&
+                    isDisplayed(loginPage.passwordField) &&
+                    isDisplayed(loginPage.loginButton)
+        }, 30)
     }
 
     /**
