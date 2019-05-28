@@ -17,8 +17,8 @@ import org.openqa.selenium.support.FindBy
 class ProductsPage extends PageObjects {
 
     @FindBy(className = "inventory_item")
-    @AndroidFindBy(xpath = "(//android.view.ViewGroup[@content-desc=\"test-Item\"])")
-    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther[@name=\"test-Item\"])")
+    @AndroidFindBy(accessibility = "test-Item")
+    @iOSXCUITFindBy(accessibility = "test-Item")
     List<WebElement> inventoryItems
 
     Device device
