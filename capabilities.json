@@ -1,10 +1,11 @@
 {
-  "set": {
+  "strategy": "one_by_one",
+  "capabilities": {
     "android": [
       {
         "capability": "android",
         "deviceName": "Local Android",
-        "remote": "http://0.0.0.0:4723/wd/hub",
+        "remote": "http://0.0.0.0:4724/wd/hub",
         "newCommandTimeout": "5000",
         "automationName": "uiautomator2",
         "autoGrantPermissions": "true",

@@ -30,6 +30,11 @@ Given(~/^user opens application on (.+) device$/) { DeviceCategory category ->
     ActionsImpl.getCoreActions(category).openApplication()
 }
 
+Given(~/^user opens application$/) { ->
+    DeviceCategory category = DeviceManager.getInstance().getCapabilities().getCapabilitiesList().first().get("category").toString().toUpperCase() as DeviceCategory
+    ActionsImpl.getCoreActions(category).openApplication()
+}
+
 After {
     DeviceManager.getInstance().quitAllDevices()
 }

@@ -32,10 +32,12 @@ class CoreActions {
             device.openBrowser(TestDataManager.getEnvironmentData("browserUrl"))
         } else {
             String appPath = device.getCapabilities().getCapability("app")
-            if (appPath.startsWith("http")) {
+            if (appPath && appPath.startsWith("http")) {
                 device.openApp()
-            } else {
+            } else if (appPath) {
                 device.openApp(new File(appPath).getAbsolutePath())
+            } else {
+                device.openApp()
             }
         }
     }
