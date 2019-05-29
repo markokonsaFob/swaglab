@@ -1,7 +1,9 @@
 package impl.helpers
 
 import io.appium.java_client.AppiumDriver
+import io.appium.java_client.MobileBy
 import io.appium.java_client.TouchAction
+import io.appium.java_client.ios.IOSDriver
 import io.appium.java_client.touch.WaitOptions
 import io.appium.java_client.touch.offset.PointOption
 import io.cify.framework.core.Device
@@ -74,9 +76,13 @@ class ActionsWrapper {
      */
     static void hideKeyboard(Device device) {
         try {
-            (device.getDriver() as AppiumDriver).hideKeyboard()
-        } catch (ignored) {
 
+            if (device.getDriver() instanceof IOSDriver) {
+                ((IOSDriver) device.getDriver()).findElement(MobileBy.AccessibilityId("return")).click()
+            } else {
+                (device.getDriver() as AppiumDriver).hideKeyboard()
+            }
+        } catch (ignored) {
         }
     }
 }
