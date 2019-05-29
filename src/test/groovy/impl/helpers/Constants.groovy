@@ -15,4 +15,6 @@ class Constants {
 
     static final String ENVIRONMENT_VARIABLES = "environmentVariables"
 
+    static final String CART_DATA = "cartData"
+
 }

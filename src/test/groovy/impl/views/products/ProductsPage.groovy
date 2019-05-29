@@ -1,9 +1,11 @@
 package impl.views.products
 
+import io.appium.java_client.MobileBy
 import io.appium.java_client.pagefactory.AndroidFindBy
 import io.appium.java_client.pagefactory.iOSXCUITFindBy
 import io.cify.framework.PageObjects
 import io.cify.framework.core.Device
+import org.openqa.selenium.By
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.support.FindBy
 
@@ -20,6 +22,16 @@ class ProductsPage extends PageObjects {
     @AndroidFindBy(accessibility = "test-Item")
     @iOSXCUITFindBy(accessibility = "test-Item")
     List<WebElement> inventoryItems
+
+    @FindBy(className = "shopping_cart_link")
+    @AndroidFindBy(accessibility = "test-Cart")
+    @iOSXCUITFindBy(accessibility = "test-Cart")
+    WebElement cartButton
+
+    // Test item inner elements
+    By addToCartLocator = MobileBy.AccessibilityId("test-ADD TO CART")
+    By priceLocator = MobileBy.AccessibilityId("test-Price")
+    By titleLocator = MobileBy.AccessibilityId("test-Item title")
 
     Device device
 

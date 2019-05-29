@@ -25,10 +25,6 @@
       }
     ],
     "browser": [
-      {
-        "capability": "firefox",
-        "deviceName": "Local Firefox"
-      }
     ]
   }
 }

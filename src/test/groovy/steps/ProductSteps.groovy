@@ -4,6 +4,7 @@ import cucumber.api.groovy.EN
 import cucumber.api.groovy.Hooks
 import impl.ActionsImpl
 import impl.helpers.CifyTestException
+import org.openqa.selenium.WebElement
 
 /**
  * Created by Marko Konsa for Nordic Testing Day workshop
@@ -19,4 +20,13 @@ Then(~/^products page should be visible$/) { ->
    if (ActionsImpl.getProductActions().isProductItineraryEmpty()) {
        throw new CifyTestException("Product itinerary should not be empty!")
    }
+}
+
+When(~/^user adds first element to cart$/) { ->
+    WebElement product = ActionsImpl.getProductActions().getProducts().first()
+    ActionsImpl.getProductActions().addProductToCart(product)
+}
+
+And(~/^user navigates to cart view$/) { ->
+    ActionsImpl.getProductActions().clickOnCartIcon()
 }
