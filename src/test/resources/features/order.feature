@@ -1,7 +1,7 @@
 Feature: Ordering item from SwagLabs shop
 
   Scenario: Complete ordering positive flow
-    Given user opens application on IOS device
+    Given user opens application
     Then login page should be visible
     When user enters VALID credentials into login form
     And user clicks login button
