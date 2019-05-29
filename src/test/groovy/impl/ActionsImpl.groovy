@@ -1,6 +1,7 @@
 package impl
 
 import impl.views.cart.CartActions
+import impl.views.checkout.CheckoutActions
 import impl.views.core.CoreActions
 import impl.views.login.LoginActions
 import impl.views.products.ProductsActions
@@ -55,6 +56,15 @@ class ActionsImpl {
     static CartActions getCartActions() {
         Device device = DeviceManager.getInstance().getActiveDevice()
         return new CartActions(device)
+    }
+
+    /**
+     * Gets Checkout actions for active device
+     * @return
+     */
+    static CheckoutActions getCheckoutActions() {
+        Device device = DeviceManager.getInstance().getActiveDevice()
+        return new CheckoutActions(device)
     }
 
 
