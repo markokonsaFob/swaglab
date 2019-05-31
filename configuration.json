@@ -5,24 +5,22 @@
     "android": [
       {
         "capability": "android",
-        "deviceName": "Local Android",
-        "remote": "http://0.0.0.0:4723/wd/hub",
-        "newCommandTimeout": "5000",
+        "name": "Android Version 9",
+        "testobject_api_key": "3DA1E303BFF646568623AA0021484161",
+        "platformVersion": "9",
         "automationName": "uiautomator2",
+        "appiumVersion": "1.13.0",
         "autoGrantPermissions": "true",
-        "app": "src/test/resources/applications/swaglab.apk",
-        "appActivity": "com.swaglabsmobileapp.MainActivity",
-        "browserName": ""
+        "remote": "https://eu1.appium.testobject.com/wd/hub"
       }
     ],
     "ios": [
       {
         "capability": "iphone",
-        "deviceName": "Local iPhone",
-        "app": "src/test/resources/applications/swaglab.ipa",
-        "remote": "http://0.0.0.0:4723/wd/hub",
-        "udid": "auto",
-        "automationName": "XCUITest"
+        "name": "iPhone version 12",
+        "testobject_api_key": "3D95B6B2FB6E4E2A9D728EB2903E2826",
+        "platformVersion": "12",
+        "remote": "https://eu1.appium.testobject.com/wd/hub"
       }
     ],
     "browser": [
